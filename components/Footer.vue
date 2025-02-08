@@ -35,16 +35,13 @@
   </footer>
 </template>
 
-<script setup>
-// Pas besoin de logique complexe ici
-</script>
-
 <style scoped>
 .footer {
   background-color: #1a1a1a;
   color: #fff;
   padding: 2rem 0;
-  margin-top: auto; /* Pour le sticky footer */
+  width: 100%; /* Occuper toute la largeur */
+  margin-top: auto; /* Pousser le footer en bas */
 }
 
 .footer-container {

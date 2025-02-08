@@ -81,10 +81,12 @@ const toggleTheme = () => {
 <style scoped>
 .navbar {
   background: linear-gradient(135deg, #1a1a1a, #333);
-  padding: 1rem 2rem;
+  padding: 1rem 2%; /* Utilisation de rem pour le padding vertical */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  position: sticky;
+  position: fixed; /* Fixer la navbar en haut */
   top: 0;
+  left: 0;
+  width: 100%; /* Occuper toute la largeur */
   z-index: 1000;
 }
 
@@ -92,8 +94,10 @@ const toggleTheme = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1200px; /* Largeur maximale fixe pour le conteneur */
+  width: 100%; /* Occuper toute la largeur disponible */
   margin: 0 auto;
+  padding: 0 2%; /* Ajout de padding pour éviter que les éléments touchent les bords */
 }
 
 .navbar-logo {
@@ -102,7 +106,7 @@ const toggleTheme = () => {
 
 .logo-text {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Conserver en rem pour la taille du texte */
   font-weight: bold;
   background: linear-gradient(45deg, #00bcd4, #0097a7);
   background-clip: text;
@@ -118,13 +122,14 @@ const toggleTheme = () => {
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem; /* Espacement fixe en rem */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
 }
 
 .navbar-menu {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem; /* Espacement fixe en rem */
   margin: 0;
   padding: 0;
 }
@@ -138,7 +143,7 @@ const toggleTheme = () => {
   top: 100%;
   left: 0;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem; /* Utilisation de rem pour le padding */
 }
 
 .navbar-menu-mobile.active {
@@ -148,13 +153,13 @@ const toggleTheme = () => {
 .navbar-link {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1rem; /* Conserver en rem pour la taille du texte */
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0; /* Utilisation de rem pour le padding */
   transition: color 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.5rem; /* Espacement fixe en rem */
 }
 
 .navbar-link::after {
@@ -201,7 +206,7 @@ const toggleTheme = () => {
   left: 0;
   background: #1a1a1a;
   list-style: none;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0; /* Utilisation de rem pour le padding */
   border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -213,7 +218,7 @@ const toggleTheme = () => {
 .dropdown-menu-mobile {
   display: none;
   list-style: none;
-  padding-left: 1rem;
+  padding-left: 1rem; /* Utilisation de rem pour le padding */
 }
 
 .dropdown-menu-mobile.active {
@@ -223,7 +228,7 @@ const toggleTheme = () => {
 .dropdown-link {
   color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem; /* Utilisation de rem pour le padding */
   display: block;
   transition: background 0.3s ease;
 }
@@ -237,7 +242,7 @@ const toggleTheme = () => {
   background: none;
   border: none;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* Conserver en rem pour la taille du texte */
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -252,7 +257,7 @@ const toggleTheme = () => {
   background: none;
   border: none;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Conserver en rem pour la taille du texte */
   cursor: pointer;
 }
 
@@ -271,6 +276,10 @@ const toggleTheme = () => {
 
   .navbar-menu-mobile.active {
     display: flex;
+  }
+
+  .navbar-right {
+    gap: 1rem; /* Réduire l'espacement sur les petits écrans */
   }
 }
 </style>
