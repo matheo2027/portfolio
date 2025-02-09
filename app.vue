@@ -1,14 +1,11 @@
 <template>
   <div class="app-container">
-    <!-- Barre de navigation -->
     <NavBar />
 
-    <!-- Contenu des pages -->
     <main class="main-content">
       <NuxtPage />
     </main>
 
-    <!-- Pied de page -->
     <Footer />
   </div>
 </template>
@@ -19,7 +16,6 @@ import Footer from '~/components/Footer.vue';
 </script>
 
 <style>
-/* Styles globaux */
 html, body {
   height: 100%;
   margin: 0;
@@ -36,7 +32,8 @@ html, body {
 }
 
 .main-content {
-  flex: 1; /* Permet au contenu de prendre tout l'espace disponible */
+  flex: 1;
   padding: 2rem;
+  margin-top: 2%;
 }
 </style>

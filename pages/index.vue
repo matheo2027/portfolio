@@ -1,63 +1,51 @@
 <template>
   <div class="home">
-    <!-- Section Hero (Introduction) -->
     <section class="hero">
       <div class="hero-content">
         <h1 class="hero-title">Bienvenue sur mon portfolio</h1>
-        <p class="hero-subtitle">Développeur passionné par la création de solutions web modernes et performantes.</p>
-        <NuxtLink to="/about" class="hero-button">En savoir plus</NuxtLink>
+        <p class="hero-subtitle">Jeune développeur passionné par la création de solutions web modernes et performantes.</p>
       </div>
     </section>
 
-    <!-- Section À propos (Présentation) -->
     <section class="about">
       <div class="about-container">
         <h2 class="about-title">À propos de moi</h2>
         <p class="about-text">
-          Je suis un développeur full-stack avec une passion pour les technologies web. J'aime créer des applications
-          intuitives, performantes et esthétiques. Mon expertise couvre le développement front-end, back-end, et la
-          gestion de bases de données.
+          Je suis un jeune développeur étudiant à l'école Epitech. J'ai une passion pour la création de sites web modernes et performants.
+          J'aime travailler sur des projets variés, de la conception à la mise en ligne. Je suis toujours à la recherche de nouveaux défis et de nouvelles technologies à apprendre.
         </p>
         <NuxtLink to="/about" class="about-button">Découvrir mon parcours</NuxtLink>
       </div>
     </section>
 
-    <!-- Section Projets récents -->
     <section class="projects">
       <h2 class="projects-title">Projets récents</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <!-- <img src="/images/project1.jpg" alt="Projet 1" class="project-image" /> -->
-          <h3 class="project-title">Site web e-commerce</h3>
+          <h3 class="project-title">Site web</h3>
           <p class="project-description">
-            Un site web e-commerce complet avec gestion de panier, paiement en ligne et tableau de bord administrateur.
+            Un site web complet qui permet de relier des services entre eux, en créant des AREA.
           </p>
-          <NuxtLink to="/projects/web" class="project-button">Voir le projet</NuxtLink>
+          <NuxtLink to="/projets/web" class="project-button">Voir le projet</NuxtLink>
         </div>
         <div class="project-card">
-          <!-- <img src="/images/project2.jpg" alt="Projet 2" class="project-image" /> -->
-          <h3 class="project-title">Application mobile</h3>
+          <h3 class="project-title">Re-création du "ls"</h3>
           <p class="project-description">
-            Une application mobile cross-platform pour la gestion de tâches avec synchronisation en temps réel.
+            Re-création de la commande "ls" en C.
           </p>
-          <NuxtLink to="/projects/mobile" class="project-button">Voir le projet</NuxtLink>
+          <NuxtLink to="/projets/ls" class="project-button">Voir le projet</NuxtLink>
         </div>
         <div class="project-card">
-          <!-- <img src="/images/project3.jpg" alt="Projet 3" class="project-image" /> -->
-          <h3 class="project-title">Design graphique</h3>
+          <h3 class="project-title">Projets Graphiques</h3>
           <p class="project-description">
-            Conception d'une identité visuelle pour une startup, incluant logo, palette de couleurs et supports de communication.
+            Création d'un émulateur de borne d'arcade en C++ qui comprends plusieurs jeux.
           </p>
-          <NuxtLink to="/projects/design" class="project-button">Voir le projet</NuxtLink>
+          <NuxtLink to="/projets/graphiques" class="project-button">Voir le projet</NuxtLink>
         </div>
       </div>
     </section>
   </div>
 </template>
-
-<script setup>
-// Pas besoin de logique complexe ici
-</script>
 
 <style scoped>
 .home {
@@ -67,7 +55,6 @@
   padding: 2rem;
 }
 
-/* Section Hero */
 .hero {
   background: linear-gradient(135deg, #1a1a1a, #333);
   color: #fff;
@@ -105,7 +92,6 @@
   transform: scale(1.05);
 }
 
-/* Section À propos */
 .about {
   background: #f4f4f4;
   padding: 4rem 2rem;
@@ -143,7 +129,6 @@
   transform: scale(1.05);
 }
 
-/* Section Projets */
 .projects {
   padding: 4rem 2rem;
   text-align: center;

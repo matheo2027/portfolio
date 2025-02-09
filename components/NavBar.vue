@@ -1,50 +1,44 @@
 <template>
   <nav class="navbar">
     <div class="navbar-container">
-      <!-- Logo à gauche -->
       <NuxtLink to="/" class="navbar-logo">
         <span class="logo-text">Mon Portfolio</span>
       </NuxtLink>
 
-      <!-- Conteneur pour les éléments à droite -->
       <div class="navbar-right">
-        <!-- Menu -->
         <ul class="navbar-menu">
           <li><NuxtLink to="/" class="navbar-link"><i class="fas fa-home"></i> Accueil</NuxtLink></li>
           <li><NuxtLink to="/about" class="navbar-link"><i class="fas fa-user"></i> À propos</NuxtLink></li>
           <li class="dropdown">
             <a href="#" class="navbar-link"><i class="fas fa-folder"></i> Projets <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><NuxtLink to="/projects/web" class="dropdown-link">Projets Web</NuxtLink></li>
-              <li><NuxtLink to="/projects/design" class="dropdown-link">Design Graphique</NuxtLink></li>
-              <li><NuxtLink to="/projects/mobile" class="dropdown-link">Applications Mobiles</NuxtLink></li>
+              <li><NuxtLink to="/projets/web" class="dropdown-link">Projet Web</NuxtLink></li>
+              <li><NuxtLink to="/projets/graphique" class="dropdown-link">Projet graphique</NuxtLink></li>
+              <li><NuxtLink to="/projets/ls" class="dropdown-link">My_ls</NuxtLink></li>
             </ul>
           </li>
           <li><NuxtLink to="/contact" class="navbar-link"><i class="fas fa-envelope"></i> Contact</NuxtLink></li>
         </ul>
 
-        <!-- Bouton de mode sombre/clair -->
         <button class="theme-toggle" @click="toggleTheme">
           <i :class="themeIcon"></i>
         </button>
       </div>
 
-      <!-- Menu hamburger pour les écrans mobiles -->
       <button class="navbar-toggle" @click="toggleMenu">
         <i class="fas fa-bars"></i>
       </button>
     </div>
 
-    <!-- Menu mobile -->
     <ul :class="['navbar-menu-mobile', { 'active': isMenuOpen }]">
       <li><NuxtLink to="/" class="navbar-link"><i class="fas fa-home"></i> Accueil</NuxtLink></li>
       <li><NuxtLink to="/about" class="navbar-link"><i class="fas fa-user"></i> À propos</NuxtLink></li>
       <li class="dropdown">
         <a href="#" class="navbar-link" @click="toggleDropdown"><i class="fas fa-folder"></i> Projets <i class="fas fa-chevron-down"></i></a>
         <ul :class="['dropdown-menu-mobile', { 'active': isDropdownOpen }]">
-          <li><NuxtLink to="/projects/web" class="dropdown-link">Projets Web</NuxtLink></li>
-          <li><NuxtLink to="/projects/design" class="dropdown-link">Design Graphique</NuxtLink></li>
-          <li><NuxtLink to="/projects/mobile" class="dropdown-link">Applications Mobiles</NuxtLink></li>
+          <li><NuxtLink to="/projets/web" class="dropdown-link">Projet Web</NuxtLink></li>
+          <li><NuxtLink to="/projets/graphique" class="dropdown-link">Projet graphique</NuxtLink></li>
+          <li><NuxtLink to="/projets/ls" class="dropdown-link">My_ls</NuxtLink></li>
         </ul>
       </li>
       <li><NuxtLink to="/contact" class="navbar-link"><i class="fas fa-envelope"></i> Contact</NuxtLink></li>
@@ -55,19 +49,16 @@
 <script setup>
 import { ref } from 'vue';
 
-// Gestion du menu mobile
 const isMenuOpen = ref(false);
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
-// Gestion du menu déroulant mobile
 const isDropdownOpen = ref(false);
 const toggleDropdown = () => {
   isDropdownOpen.value = !isDropdownOpen.value;
 };
 
-// Gestion du mode sombre/clair
 const isDarkMode = ref(false);
 const themeIcon = ref('fas fa-moon');
 
@@ -81,12 +72,12 @@ const toggleTheme = () => {
 <style scoped>
 .navbar {
   background: linear-gradient(135deg, #1a1a1a, #333);
-  padding: 1rem 2%; /* Utilisation de rem pour le padding vertical */
+  padding: 1rem 2%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  position: fixed; /* Fixer la navbar en haut */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Occuper toute la largeur */
+  width: 100%;
   z-index: 1000;
 }
 
@@ -94,10 +85,10 @@ const toggleTheme = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px; /* Largeur maximale fixe pour le conteneur */
-  width: 100%; /* Occuper toute la largeur disponible */
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 2%; /* Ajout de padding pour éviter que les éléments touchent les bords */
+  padding: 0 2%;
 }
 
 .navbar-logo {
@@ -106,7 +97,7 @@ const toggleTheme = () => {
 
 .logo-text {
   color: #fff;
-  font-size: 1.5rem; /* Conserver en rem pour la taille du texte */
+  font-size: 1.5rem;
   font-weight: bold;
   background: linear-gradient(45deg, #00bcd4, #0097a7);
   background-clip: text;
@@ -122,14 +113,14 @@ const toggleTheme = () => {
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 1.5rem; /* Espacement fixe en rem */
-  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .navbar-menu {
   list-style: none;
   display: flex;
-  gap: 1.5rem; /* Espacement fixe en rem */
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }
@@ -143,7 +134,7 @@ const toggleTheme = () => {
   top: 100%;
   left: 0;
   width: 100%;
-  padding: 1rem; /* Utilisation de rem pour le padding */
+  padding: 1rem;
 }
 
 .navbar-menu-mobile.active {
@@ -153,13 +144,13 @@ const toggleTheme = () => {
 .navbar-link {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem; /* Conserver en rem pour la taille du texte */
+  font-size: 1rem;
   position: relative;
-  padding: 0.5rem 0; /* Utilisation de rem pour le padding */
+  padding: 0.5rem 0;
   transition: color 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Espacement fixe en rem */
+  gap: 0.5rem;
 }
 
 .navbar-link::after {
@@ -184,7 +175,6 @@ const toggleTheme = () => {
   color: #00bcd4;
 }
 
-/* Style actif pour le lien de la page courante */
 .nuxt-link-exact-active {
   color: #00bcd4;
   font-weight: bold;
@@ -194,7 +184,6 @@ const toggleTheme = () => {
   transform: scaleX(1);
 }
 
-/* Menu déroulant */
 .dropdown {
   position: relative;
 }
@@ -206,7 +195,7 @@ const toggleTheme = () => {
   left: 0;
   background: #1a1a1a;
   list-style: none;
-  padding: 0.5rem 0; /* Utilisation de rem pour le padding */
+  padding: 0.5rem 0;
   border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -218,7 +207,7 @@ const toggleTheme = () => {
 .dropdown-menu-mobile {
   display: none;
   list-style: none;
-  padding-left: 1rem; /* Utilisation de rem pour le padding */
+  padding-left: 1rem;
 }
 
 .dropdown-menu-mobile.active {
@@ -228,7 +217,7 @@ const toggleTheme = () => {
 .dropdown-link {
   color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1rem; /* Utilisation de rem pour le padding */
+  padding: 0.5rem 1rem;
   display: block;
   transition: background 0.3s ease;
 }
@@ -237,12 +226,11 @@ const toggleTheme = () => {
   background: #333;
 }
 
-/* Bouton de mode sombre/clair */
 .theme-toggle {
   background: none;
   border: none;
   color: #fff;
-  font-size: 1.2rem; /* Conserver en rem pour la taille du texte */
+  font-size: 1.2rem;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -251,13 +239,12 @@ const toggleTheme = () => {
   transform: scale(1.1);
 }
 
-/* Menu hamburger */
 .navbar-toggle {
   display: none;
   background: none;
   border: none;
   color: #fff;
-  font-size: 1.5rem; /* Conserver en rem pour la taille du texte */
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -279,7 +266,7 @@ const toggleTheme = () => {
   }
 
   .navbar-right {
-    gap: 1rem; /* Réduire l'espacement sur les petits écrans */
+    gap: 1rem;
   }
 }
 </style>

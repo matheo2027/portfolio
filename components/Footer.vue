@@ -3,34 +3,26 @@
     <div class="footer-container">
       <div class="footer-section">
         <h3 class="footer-title">Mon Portfolio</h3>
-        <p class="footer-text">Créé avec passion et dévouement.</p>
+        <p class="footer-text">Créé par moi, pour moi.</p>
       </div>
       <div class="footer-section">
         <h4 class="footer-subtitle">Liens rapides</h4>
         <ul class="footer-links">
           <li><NuxtLink to="/" class="footer-link">Accueil</NuxtLink></li>
           <li><NuxtLink to="/about" class="footer-link">À propos</NuxtLink></li>
-          <li><NuxtLink to="/projects" class="footer-link">Projets</NuxtLink></li>
           <li><NuxtLink to="/contact" class="footer-link">Contact</NuxtLink></li>
         </ul>
       </div>
       <div class="footer-section">
         <h4 class="footer-subtitle">Réseaux sociaux</h4>
-        <div class="social-icons">
-          <a href="https://twitter.com" target="_blank" class="social-icon">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://github.com" target="_blank" class="social-icon">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin"></i>
-          </a>
+        <div class="social-links">
+          <a href="https://github.com/matheo2027" target="_blank" class="footer-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/math%C3%A9o-piques-521805263/" target="_blank" class="footer-link">LinkedIn</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2023 Mon Portfolio. Tous droits réservés.</p>
+      <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
     </div>
   </footer>
 </template>
@@ -40,8 +32,8 @@
   background-color: #1a1a1a;
   color: #fff;
   padding: 2rem 0;
-  width: 100%; /* Occuper toute la largeur */
-  margin-top: auto; /* Pousser le footer en bas */
+  width: 100%;
+  margin-top: auto;
 }
 
 .footer-container {
@@ -81,22 +73,13 @@
 }
 
 .footer-link:hover {
-  color: #00bcd4; /* Couleur au survol */
+  color: #00bcd4;
 }
 
-.social-icons {
+.social-links {
   display: flex;
-  gap: 1rem;
-}
-
-.social-icon {
-  color: #fff;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-  color: #00bcd4; /* Couleur au survol */
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .footer-bottom {
