@@ -14,7 +14,7 @@
           Je suis un jeune développeur étudiant à l'école Epitech. J'ai une passion pour la création de sites web modernes et performants.
           J'aime travailler sur des projets variés, de la conception à la mise en ligne. Je suis toujours à la recherche de nouveaux défis et de nouvelles technologies à apprendre.
         </p>
-        <NuxtLink to="/about" class="about-button">Découvrir mon parcours</NuxtLink>
+        <NuxtLink to="/about" class="about-button">Découvrir qui je suis</NuxtLink>
       </div>
     </section>
 
@@ -40,7 +40,7 @@
           <p class="project-description">
             Création d'un émulateur de borne d'arcade en C++ qui comprends plusieurs jeux.
           </p>
-          <NuxtLink to="/projets/graphiques" class="project-button">Voir le projet</NuxtLink>
+          <NuxtLink to="/projets/graphique" class="project-button">Voir le projet</NuxtLink>
         </div>
       </div>
     </section>
